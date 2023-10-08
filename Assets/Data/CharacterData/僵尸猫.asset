@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c57802ecb606bb47854839d1e72e477, type: 3}
+  m_Name: "\u50F5\u5C38\u732B"
+  m_EditorClassIdentifier: 
+  characterName: "\u50F5\u5C38\u732B"
+  selftag: 3
+  hp: 10
+  atk: 2
+  def: 1
+  magicdef: 0
+  magicatk: 1
+  magicRate: 25
+  canMagic: 1
+  level: 0
+  skills:
+  - {fileID: 11400000, guid: 3f7ee8b80d94d6c4bb3532b69b066c1f, type: 2}
+  Exp_contains: 5
