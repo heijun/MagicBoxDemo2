@@ -42,7 +42,7 @@ public class CameraViewer : MonoBehaviour
             _mainCamera.transform.RotateAround(centerPoint, Vector3.up, _mouseX * rotateSpeed);
 
             //控制相机绕中心点垂直旋转(！注意此处的旋转轴时相机自身的x轴正方向！)
-            _mainCamera.transform.RotateAround(centerPoint, _mainCamera.transform.right, _mouseY * rotateSpeed);
+            _mainCamera.transform.RotateAround(centerPoint, -_mainCamera.transform.right, _mouseY * rotateSpeed);
 
             //记录相机绕中心点垂直旋转的总角度
             angle += _mouseY * rotateSpeed;
