@@ -45,10 +45,12 @@ public class PlayerCtrl : MonoBehaviour
         if (horizontal*vertical==0f)
             if (魔方.Instance.是否正在旋转 == false)
             {
-                Collider[] a=Physics.OverlapBox(transform.position +transform.up * vertical + transform.right*horizontal + 0.5f * transform.forward,
+                Collider[] body=Physics.OverlapBox(transform.position +transform.up * vertical + transform.right*horizontal + 0.5f * transform.forward,
                     Vector3.one *0.4f,Quaternion.identity,rayLayer);
-                Debug.Log("num:"+a.Length);
-                if (a.Length>=1 && !ismove)
+                bool face = Physics.Raycast(transform.position, transform.up * vertical + transform.right * horizontal,0.5f);
+                Debug.Log("num:"+body.Length);
+                Debug.Log(face);
+                if (body.Length>=1 && !face && !ismove)
                 {
                     transform.DOMove(transform.position + transform.up*vertical+transform.right*horizontal, 1F);
                     ismove = true;
